@@ -5,7 +5,19 @@
       <div class="card-body">
         <h5 class="card-title"  style="height: 3rem;">{{ shop.name }}</h5>
         <p class="card-text" style="height: 2rem;">{{ shop.address }}</p>
-        <app-like></app-like>
+        <div class="vote">
+            <div class="vote_bare">
+              <div class="vote_prgress" style="{{ countProgress(shop) }}"></div>
+            </div>
+            <div class="vote_btns">
+              <a  href="#" class="vote_btn vote_like btn btn-secondary" (click)="likeButtonClick($event, shop.id)">
+                <i class="fa fa-thumbs-up"></i> {{ shop.like_count }}
+              </a>
+              <a href="#" class="vote_btn vote_dislike btn btn-secondary float-right" (click)="dislikeButtonClick($event, shop.id)">
+                <i class="fa fa-thumbs-down"></i> {{ shop.dislike_count }}
+              </a>
+            </div>
+          </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,13 @@
-<a href="#" class="btn btn-secondary" (click)="likeButtonClick()">
-  <i class="fa fa-thumbs-up"></i> {{ numberOfLikes }}
-</a>
-<a href="#" class="btn btn-secondary float-right" (click)="dislikeButtonClick()">
-    <i class="fa fa-thumbs-down"></i> {{ numberOfDislikes }}
-</a>
+<div class="vote">
+  <div class="vote_bare">
+    <div class="vote_prgress"></div>
+  </div>
+  <div class="vote_btns">
+    <div class="vote_btn vote_like btn btn-secondary">
+      <i class="fa fa-thumbs-up"></i> {{ shop.like_count }}
+    </div>
+    <div class="vote_btn vote_dislike btn btn-secondary float-right" (click)="dislikeButtonClick()">
+      <i class="fa fa-thumbs-down"></i> {{ shop.dislike_count }}
+    </div>
+  </div>
+</div>

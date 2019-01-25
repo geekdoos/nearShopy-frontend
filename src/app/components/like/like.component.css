@@ -1,0 +1,22 @@
+.vote_bare{
+    height: 4px;
+    width: 100%;
+    background-color: red;
+    margin-bottom: 5px;
+}
+
+.vote_prgress{
+    height: 4px;
+    width: 0%;
+    background-color: green;
+}
+
+.vote_like:hover{
+    background-color: rgb(9, 195, 9);
+    transition: O.5s;
+}
+
+.vote_dislike:hover{
+    background-color: rgb(151, 8, 8);
+    transition: O.5s;
+}

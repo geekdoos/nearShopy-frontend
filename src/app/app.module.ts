@@ -20,6 +20,8 @@ import { ShopComponent } from './components/shop/shop.component';
 import { LikeComponent } from './components/like/like.component';
 import { ShopService } from './services/shop.service';
 import { HomeComponent } from './components/home/home.component';
+import { LocalisationComponent } from './components/localisation/localisation.component';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 @NgModule({
   declarations: [
@@ -33,13 +35,15 @@ import { HomeComponent } from './components/home/home.component';
     ResponseResetComponent,
     ShopComponent,
     LikeComponent,
-    HomeComponent
+    HomeComponent,
+    LocalisationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SnotifyModule
   ],
   providers: [
     JarwisService,
@@ -47,7 +51,9 @@ import { HomeComponent } from './components/home/home.component';
     AuthService,
     AfterLoginService,
     BeforeLoginService,
-    ShopService
+    ShopService,
+    { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
+    SnotifyService
   ],
   bootstrap: [AppComponent]
 })

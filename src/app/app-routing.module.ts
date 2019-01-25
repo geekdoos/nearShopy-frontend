@@ -38,7 +38,7 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [BeforeLoginService]
+    canActivate: [AfterLoginService]
   }
 ];
 
